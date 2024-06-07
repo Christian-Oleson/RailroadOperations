@@ -17,14 +17,14 @@ class TrainController(
     fun getAll() : Mono<HttpResponse<*>> {
         return Mono.just(trainService.getAllTrains())
             .map<HttpResponse<*>> { HttpResponse.ok(it) }
-            .switchIfEmpty(Mono.error(TrainException("Train table not created")))
+            .switchIfEmpty(Mono.error(TrainException("Could not retrieve trains")))
     }
 
     @Get("/{id}")
     fun get(id: Int) : Mono<HttpResponse<*>> {
         return Mono.just(trainService.getTrain(id))
             .map<HttpResponse<*>> { HttpResponse.ok(it) }
-            .switchIfEmpty(Mono.error(TrainException("Train table not created")))
+            .switchIfEmpty(Mono.error(TrainException("No Train found with id $id")))
     }
 
     @Post("/createTable")
@@ -51,20 +51,20 @@ class TrainController(
     fun attachCar(@Body car: RailCar, id: Int) : Mono<HttpResponse<*>> {
         return Mono.just(trainService.attachCar(car, id))
             .map<HttpResponse<*>> { HttpResponse.ok(it) }
-            .switchIfEmpty(Mono.error(TrainException("Train not created")))
+            .switchIfEmpty(Mono.error(TrainException("Train Car not attached")))
     }
 
     @Delete("/{id}")
     fun delete(id: Int) : Mono<HttpResponse<*>> {
         return Mono.just(trainService.deleteTrain(id))
             .map<HttpResponse<*>> { HttpResponse.ok("Deleted Train $id") }
-            .switchIfEmpty(Mono.error(TrainException("Train table not created")))
+            .switchIfEmpty(Mono.error(TrainException("Train not deleted")))
     }
 
     @Delete("/{id}/car/{carId}")
     fun deleteCar(id: Int, carId: Int) : Mono<HttpResponse<*>> {
         return Mono.just(trainService.deleteCar(carId, id))
             .map<HttpResponse<*>> { HttpResponse.ok("Deleted Car $carId from Train $id") }
-            .switchIfEmpty(Mono.error(TrainException("Train table not created")))
+            .switchIfEmpty(Mono.error(TrainException("Train car not deleted")))
     }
 }
