@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "2e9ff549-6337-429c-8b9a-35096deb8ba7",
+		"name": "RailroadOps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3613123"
+	},
+	"item": [
+		{
+			"name": "Train",
+			"item": [
+				{
+					"name": "Create Table",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}Train/createTable",
+							"host": [
+								"{{url}}Train"
+							],
+							"path": [
+								"createTable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Train",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Thomas\",\r\n    \"destination\": \"Sodor Zoo\",\r\n    \"cars\": [{\r\n            \"id\": 1,\r\n            \"name\": \"Annie\",\r\n            \"destination\": \"Sodor Zoo\",\r\n            \"receiver\": \"Sir Toppham Hat\",\r\n            \"railCarType\": \"BOXCAR\"\r\n        }, {\r\n            \"id\": 2,\r\n            \"name\": \"Claribel\",\r\n            \"destination\": \"Tidmouth Sheds\",\r\n            \"receiver\": \"Mechanical\",\r\n            \"railCarType\": \"BOXCAR\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}Train/",
+							"host": [
+								"{{url}}Train"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Train",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}Train/1",
+							"host": [
+								"{{url}}Train"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Trains",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}Train/1",
+							"host": [
+								"{{url}}Train"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}Train/2",
+							"host": [
+								"{{url}}Train"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Car",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}Train/1",
+							"host": [
+								"{{url}}Train"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Classification",
+			"item": [
+				{
+					"name": "Create Table",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}Classification/createTable",
+							"host": [
+								"{{url}}Classification"
+							],
+							"path": [
+								"createTable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Classification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Thomas\",\r\n    \"destination\": \"Sodor Zoo\",\r\n    \"cars\": [{\r\n            \"id\": 1,\r\n            \"name\": \"Annie\",\r\n            \"destination\": \"Sodor Zoo\",\r\n            \"receiver\": \"Sir Toppham Hat\",\r\n            \"railCarType\": \"BOXCAR\"\r\n        }, {\r\n            \"id\": 2,\r\n            \"name\": \"Claribel\",\r\n            \"destination\": \"Tidmouth Sheds\",\r\n            \"receiver\": \"Mechanical\",\r\n            \"railCarType\": \"BOXCAR\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}Classification/",
+							"host": [
+								"{{url}}Classification"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Classification",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}Classification/1",
+							"host": [
+								"{{url}}Classification"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Classifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}Classification/",
+							"host": [
+								"{{url}}Classification"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}Classification/2",
+							"host": [
+								"{{url}}Classification"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Car",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}Classification/1",
+							"host": [
+								"{{url}}Classification"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Receiver",
+			"item": [
+				{
+					"name": "Create Table",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}Receiver/createTable",
+							"host": [
+								"{{url}}Receiver"
+							],
+							"path": [
+								"createTable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Receiver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Thomas\",\r\n    \"destination\": \"Sodor Zoo\",\r\n    \"cars\": [{\r\n            \"id\": 1,\r\n            \"name\": \"Annie\",\r\n            \"destination\": \"Sodor Zoo\",\r\n            \"receiver\": \"Sir Toppham Hat\",\r\n            \"railCarType\": \"BOXCAR\"\r\n        }, {\r\n            \"id\": 2,\r\n            \"name\": \"Claribel\",\r\n            \"destination\": \"Tidmouth Sheds\",\r\n            \"receiver\": \"Mechanical\",\r\n            \"railCarType\": \"BOXCAR\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}Receiver/100",
+							"host": [
+								"{{url}}Receiver"
+							],
+							"path": [
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Receiver",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}Receiver/1",
+							"host": [
+								"{{url}}Receiver"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Receiver",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}Classification/",
+							"host": [
+								"{{url}}Classification"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}Receiver/2",
+							"host": [
+								"{{url}}Receiver"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Car",
+			"item": [
+				{
+					"name": "Get Rail Car",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}Train/1",
+							"host": [
+								"{{url}}Train"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080/",
+			"type": "string"
+		}
+	]
+}
